@@ -16,8 +16,10 @@
     "laravel/sail": "^1.24",
     "mockery/mockery": "^1.6.6",
     "nunomaduro/collision": "^7.8.1",
+    "nunomaduro/larastan": "^2.6",
     "pestphp/pest": "^2.17",
     "pestphp/pest-plugin-laravel": "^2.2",
+    "pestphp/pest-plugin-type-coverage": "^2.2",
     "roave/security-advisories": "dev-latest",
     "spatie/laravel-ignition": "^2.3"
   },
@@ -46,6 +48,21 @@
     ],
     "post-create-project-cmd": [
       "@php artisan key:generate --ansi"
+    ],
+    "dump": [
+      "composer dump-autoload --optimize --strict-psr --classmap-authoritative"
+    ],
+    "pint": [
+      "./vendor/bin/pint"
+    ],
+    "stan": [
+      "./vendor/bin/phpstan analyse --memory-limit=3g --debug"
+    ],
+    "test": [
+      "@php artisan test"
+    ],
+    "types": [
+      "./vendor/bin/pest --type-coverage"
     ]
   },
   "extra": {
