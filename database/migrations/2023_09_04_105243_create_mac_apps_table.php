@@ -10,22 +10,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('users', static function (Blueprint $table): void {
+        Schema::create('mac_apps', static function (Blueprint $table): void {
             $table->ulid('id')->primary();
 
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
 
-            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('mac_apps');
     }
 };
