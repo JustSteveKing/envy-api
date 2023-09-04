@@ -8,7 +8,9 @@
     "guzzlehttp/guzzle": "^7.8",
     "laravel/framework": "^10.21",
     "laravel/sanctum": "^3.2.6",
-    "laravel/tinker": "^2.8.2"
+    "laravel/tinker": "^2.8.2",
+    "treblle/api-responses": "^0.0.2",
+    "treblle/error-codes": "^0.0.1"
   },
   "require-dev": {
     "fakerphp/faker": "^1.23.0",
