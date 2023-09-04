@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Route;
 
 final class RouteServiceProvider extends ServiceProvider
 {
-    public const HOME = '/';
-
     public function boot(): void
     {
         RateLimiter::for(
@@ -26,12 +24,8 @@ final class RouteServiceProvider extends ServiceProvider
         );
 
         $this->routes(function (): void {
-            Route::middleware('api')->prefix('api')->group(
+            Route::middleware('api')->group(
                 base_path('routes/api.php')
-            );
-
-            Route::middleware('web')->group(
-                base_path('routes/web.php')
             );
         });
     }
