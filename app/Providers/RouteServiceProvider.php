@@ -25,7 +25,7 @@ final class RouteServiceProvider extends ServiceProvider
 
         $this->routes(function (): void {
             Route::middleware('api')->group(
-                base_path('routes/api.php')
+                base_path('routes/routes.php')
             );
         });
     }
