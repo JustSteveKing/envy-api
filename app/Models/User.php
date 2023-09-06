@@ -26,6 +26,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property null|CarbonInterface $updated_at
  * @property null|CarbonInterface $deleted_at
  * @property Collection<Device> $devices
+ * @method static find(string $id) User
  */
 final class User extends Authenticatable
 {
