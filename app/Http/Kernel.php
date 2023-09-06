@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http;
 
+use App\Http\Middleware\DeviceAwareMiddleware;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
@@ -52,6 +53,7 @@ final class Kernel extends HttpKernel
         'auth' => Authenticate::class,
         'cache.headers' => SetCacheHeaders::class,
         'can' => Authorize::class,
+        'device' => DeviceAwareMiddleware::class,
         'password.confirm' => RequirePassword::class,
         'signed' => ValidateSignature::class,
         'throttle' => ThrottleRequests::class,

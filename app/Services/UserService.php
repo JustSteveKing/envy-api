@@ -30,4 +30,16 @@ final readonly class UserService
             user: $user,
         );
     }
+
+    /**
+     * @param NewUser $user
+     * @return User|Model
+     * @throws Throwable
+     */
+    public function addUser(NewUser $user): User|Model
+    {
+        return $this->repository->create(
+            user: $user,
+        );
+    }
 }
